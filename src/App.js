@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className='flex h-full w-full relative'>
-        <div className='hidden absolute top-0 left-0 w-[200px] h-[835px] bg-blue-50 flex flex-col gap-4 text-left w-full'>
+        <div className='hidden absolute top-0 left-0 h-[835px] bg-blue-50 flex flex-col gap-4 text-left w-full'>
           <button className='flex px-2 w-full justify-start'>
             <IoMdMenu size={24} />
           </button>
@@ -38,7 +38,7 @@ function App() {
             Action Center
           </button>
         </div>
-        <div className=''>
+        <div className='w-full'>
           <div className='flex w-full justify-between items-center mt-3 px-3 md:hidden'>
             <div className='flex items-center gap-1'>
               <button className='bg-blue-100 rounded-full px-2 py-2'>

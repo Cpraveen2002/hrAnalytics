@@ -1,8 +1,10 @@
 import React from 'react'
+import { useState } from "react";
 import { FiAlertTriangle, FiTarget } from "react-icons/fi";
 import { LuHandCoins } from "react-icons/lu";
 import { AiOutlineFileExcel, AiOutlineSafetyCertificate } from "react-icons/ai";
 import { Pie, PieChart, Cell, Area, AreaChart, LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import Dailog from './Dailog';
 const data = [
     { region: "APAC", value: 420 },
     { region: "EMEA", value: 310 },
@@ -48,6 +50,7 @@ const tableData = [
 ];
 const COLORS = ["#ef4444", "#f59e0b", "#22c55e",];
 const Overview = () => {
+    const [open, setOpen] = useState(false);
     return (
         <div className='flex flex-col justify-start items-start w-full gap-4'>
             <div className='gap-4 flex-col md:flex md:flex-row md:items-start lg:flex-row justify:start lg:justify-between items-start w-full'>
@@ -75,8 +78,12 @@ const Overview = () => {
                 </div>
             </div>
             <div className='grid lg:grid-cols-4 grid-cols-2 gap-2 w-full justify-start items-start'>
-                <div className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
-                    <div className='flex flex-row justify-between items-start gap-4'>
+                <button type='button' onClick={() => {
+                    setOpen(true)
+                    console.log("clicked")
+
+                }} className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
+                    <div className='flex flex-row justify-between items-start gap-4' >
                         <p className='text-md lg:text-lg font-bold'>
                             APAC
                         </p>
@@ -93,8 +100,8 @@ const Overview = () => {
                     <p className='text-gray-500 font-semibold text-sm lg:text-md'>
                         Open Roles: 28
                     </p>
-                </div>
-                <div className=' flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
+                </button>
+                <button type='button' onClick={() => { setOpen(true) }} className=' flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
                     <div className='flex flex-row justify-between items-start gap-4'>
 
                         <p className='text-md lg:text-lg font-bold'>
@@ -113,8 +120,8 @@ const Overview = () => {
                     <p className='text-gray-500 font-semibold text-sm lg:text-md '>
                         Open Roles: 22
                     </p>
-                </div>
-                <div className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
+                </button>
+                <button type='button' onClick={() => { setOpen(true) }} className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
                     <div className='flex flex-row justify-between items-start gap-4'>
 
                         <p className='text-md lg:text-lg font-bold'>
@@ -133,8 +140,8 @@ const Overview = () => {
                     <p className='text-gray-500 font-semibold text-sm lg:text-md'>
                         Open Roles: 28
                     </p>
-                </div>
-                <div className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
+                </button>
+                <button type='button' onClick={() => { setOpen(true) }} className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
                     <div className='flex flex-row justify-between items-start gap-4'>
 
                         <p className=' text-left text-md lg:text-lg font-bold'>
@@ -153,8 +160,9 @@ const Overview = () => {
                     <p className='text-gray-500 font-semibold text-sm lg:text-md'>
                         Open Roles: 20
                     </p>
-                </div>
+                </button>
             </div>
+            <Dailog open={open} onClose={() => setOpen(false)} />
             <div className=' lg:flex justify-start items-start gap-2 w-full'>
                 <div className='lg:w-[50%] md:w-full flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 '>
                     <p className='font-bold text-sm lg:text-lg'>
@@ -397,7 +405,7 @@ const Overview = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
