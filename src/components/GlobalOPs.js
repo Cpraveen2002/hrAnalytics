@@ -91,7 +91,7 @@ const GlobalOPs = () => {
                                 Pending
                             </span>
                             <span className='border-2 shadow-md font-bold rounded-full px-3 py-1 text-sm lg:text-md'>
-                                EMEA
+                                APAC
                             </span>
                             <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full  text-sm lg:text-md'>
                                 <CiClock2 className='w-5 h-5 lg:w-7 lg:h-7' />
@@ -110,11 +110,11 @@ const GlobalOPs = () => {
                         </div>
                     </div>
                     <p className='text-md'>
-                        Cost Validation
+                        Hiring Plan
                     </p>
                     <div className='flex gap-1 w-full justify-between'>
                         <p className='text-left text-gray-500 text-sm lg:text-md'>
-                            Confirm May cost deltas for R&D
+                            FY workforce plan revisions
                         </p>
                         <div className='flex gap-3 md:hidden lg:hidden'>
                             <button className='border-2 shadow-md px-4 py-1 rounded-md font-bold text-sm lg:text-md' >

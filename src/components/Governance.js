@@ -9,7 +9,7 @@ const data = [
 ];
 const Governance = () => {
     return (
-        <div className='w-auto flex flex-col gap-3 px-4 py-2 justify-start items-start mt-3'>
+        <div className='w-full flex flex-col gap-3 px-4 py-2 justify-start items-start mt-3'>
             <div className='flex items-center justify-between w-full'>
                 <div className=''>
                     <p className='font-bold text-sm lg:text-lg text-left'>

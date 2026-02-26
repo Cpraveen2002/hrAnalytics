@@ -15,7 +15,7 @@ const Module = () => {
             <p className='text-left text-gray-500 font-medium text-sm lg:text-md'>
                 Designed for a global HR data-driven operating model.
             </p>
-            <div className='grid grid-cols-4 gap-2 md:grid-cols-4 lg:grid-cols-1'>
+            <div className='grid grid-cols-4 gap-2 md:grid-cols-4 lg:grid-cols-1 w-full'>
                 <div className='w-full flex  gap-2 justify-start items-center shadow-md px-2 py-2 rounded-xl'>
                     <BiCategoryAlt className='w-6 h-6 lg:w-8 lg:h-8 bg-blue-100 px-1 rounded-xl text-gray-600' />
                     <div className='flex flex-col justify-start items-start'>

@@ -235,10 +235,10 @@ const Planning = () => {
                     </div>
                     <div className=' flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 '>
                         <p className='font-bold text-sm lg:text-md'>
-                            Headcount by Region
+                            Baseline vs Projected vs Demand
                         </p>
                         <p className='font-semibold text-left text-gray-500 text-sm lg:text-md'>
-                            Leadership view(drill-down available above)
+                            Explainable comparison for leadership discussions.
                         </p>
                         <div className='w-full h-[200px] lg:h-[300px]'>
                             <ResponsiveContainer>
