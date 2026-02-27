@@ -6,7 +6,7 @@ import { MdOutlineAttachMoney } from "react-icons/md";
 export default function DashBoard() {
     return (
         <div className='grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-2 items-center ml-5 mr-5 mt-5 px-4' >
-            <div className='flex flex-col gap-3 justify-start items-start w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-md rounded-md px-3 py-4'>
+            <div className='flex flex-col gap-3 justify-start items-start w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-sm rounded-md px-3 py-4 border-2 border-gray-30'>
                 <div className="flex  text-gray-600 gap-2">
                     <GoPeople className="w-5 h-5 lg:w-7 lg:h-7" style={{ strokeWidth: 1.5 }} />
                     <p className='text-lg font-semibold'>Headcount</p>
@@ -18,7 +18,7 @@ export default function DashBoard() {
                     Region: Global
                 </p>
             </div>
-            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6]  shadow-md rounded-md px-3 py-4'>
+            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6]  shadow-sm rounded-md px-3 py-4 border-2 border-gray-30'>
                 <div className="flex  text-gray-600 gap-2 ">
                     <IoBagOutline className="w-5 h-5 lg:w-7 lg:h-7" style={{ strokeWidth: 1.5 }} />
                     <p className='text-lg font-semibold'>Open Roles</p>
@@ -30,7 +30,7 @@ export default function DashBoard() {
                     Hiring Pipeline
                 </p>
             </div>
-            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-md rounded-md  px-3 py-4'>
+            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-sm rounded-md  px-3 py-4 border-2 border-gray-30'>
                 <div className="flex text-gray-600 gap-2">
                     <IoMdTrendingUp className="w-5 h-5 lg:w-7 lg:h-7" style={{ strokeWidth: 1.5 }} />
                     <p className='font-semibold text-lg'>Attrition</p>
@@ -42,7 +42,7 @@ export default function DashBoard() {
                     Monthly Rate
                 </p>
             </div>
-            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-md rounded-md px-3 py-4'>
+            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-sm rounded-md px-3 py-4 border-2 border-gray-30'>
                 <div className="flex text-gray-600 gap-2">
                     <TbActivityHeartbeat className="w-5 h-5 lg:w-7 lg:h-7" style={{ strokeWidth: 1.5 }} />
                     <p className='font-semibold text-lg'>Avg Tenure</p>
@@ -54,7 +54,7 @@ export default function DashBoard() {
                     Workforce Stability
                 </p>
             </div>
-            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-md rounded-md px-3 py-4'>
+            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-sm rounded-md px-3 py-4 border-2 border-gray-30'>
                 <div className="flex  text-gray-600 gap-2">
                     <MdOutlineAttachMoney className="w-5 h-5 lg:w-7 lg:h-7" style={{ strokeWidth: 1.5 }} />
 
@@ -67,7 +67,7 @@ export default function DashBoard() {
                     Annual estimate
                 </p>
             </div>
-            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-md shadow-red-500 rounded-md px-3 py-4'>
+            <div className='flex flex-col gap-3 justify-start items-start  w-[1/2] md:w-[1/3] lg:w-[1/6] shadow-sm shadow-red-500 rounded-md px-3 py-4 border-2 border-red-300'>
                 <div className="flex flex-col md:flex-row lg:flex-row gap-2 justify-center items-start text-gray-600 ">
                     <div className="flex justify-center items-center rounded text-gray-600 gap-2">
                         <TbAlignBoxCenterTop className="w-5 h-5 lg:w-7 lg:h-7" style={{ strokeWidth: 1.5 }} />

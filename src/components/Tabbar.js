@@ -10,9 +10,9 @@ import Governance from './Governance';
 const Tabbar = () => {
     const [active, setActive] = React.useState("Overview");
     return (
-        <div className='flex flex-col shadow-md gap-2 px-1 py-3 rounded-xl justify-start items-start w-full m-2'>
+        <div className='flex flex-col shadow-sm border-2 border-gray-30 gap-2 px-2 py-3 rounded-xl justify-start items-start w-full m-2'>
             <div className='flex  md:flex flex-col justify-between lg:flex lg:flex-row justify-between items-center gap-3 w-full'>
-                <div className='flex w-full bg-blue-100 rounded-lg justify-between px-2 py-2 font-bold text-lg'>
+                <div className='flex w-full bg-blue-100 rounded-lg justify-between px-2 py-2 font-bold text-lg border-2 border-gray-30'>
                     <button className={`h-full px-4 py-1 rounded-xl text-gray-500 font-semibold ${active === "Overview" ? "bg-white shadow-md text-black" : ""}`} onClick={() => setActive("Overview")}>
                         Overview
                     </button>
@@ -36,13 +36,13 @@ const Tabbar = () => {
                     </button>
                 </div>
                 <div className=' flex flex-row w-full justify-between items-start lg:flex-row items-center gap-2 items-start'>
-                    <div className='flex gap-2 flex-row justify-center items-center rounded-2xl font-bold shadow-md px-2 py-1'>
+                    <div className='flex gap-2 flex-row justify-center items-center rounded-2xl font-bold shadow-sm px-2 py-1 border-2 border-gray-30'>
                         <CiFilter className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1 }} />
                         <p className='text-lg'>
                             Global
                         </p>
                     </div>
-                    <div className=' flex gap-2 flex-row justify-center items-center rounded-2xl shadow-md py-1 px-1'>
+                    <div className=' flex gap-2 flex-row justify-center items-center rounded-2xl shadow-sm py-1 px-1 border-2 border-gray-30'>
                         <CiUser className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1 }} />
                         <p className='text-left font-bold text-lg'>
                             HR Data Analytics Specialst
