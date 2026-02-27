@@ -28,7 +28,7 @@ function App() {
           <div className='flex flex-row items-center justify-between gap-4 items-center w-full lg:w-auto '>
             <input type="text" placeholder='Search people signals,teams' className='shadow-md border-2 rounded-md px-8 py-2 text-lg' />
             <div className='hidden md:flex  lg:flex  ml-2 justify-between items-center shadow-md rounded-md px-12 py-2'>
-              <div className='mr-2 flex flex-row justify-start items-center font-bold lg:text-lg border-2'>
+              <div className='mr-2 flex flex-row justify-start items-center font-bold lg:text-lg '>
                 <p>Global</p>
               </div>
               <div className='ml-2 flex flex-row justify-end items-center'>
