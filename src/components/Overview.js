@@ -319,7 +319,7 @@ const Overview = () => {
                     </div>
                 </div>
             </div>
-            <div className='lg:flex w-full gap-2 justify-start'>
+            <div className='lg:flex w-full gap-2 justify-start items-start'>
                 <div className='lg:w-[1/2] md:w-full flex flex-col gap-1 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4 text-lg'>
                     <p className='font-bold text-lg'>
                         Workforce Cost Overlay(Planful-ready)
