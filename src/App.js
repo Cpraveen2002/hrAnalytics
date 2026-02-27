@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
       <div className='w-full'>
-        <div className='mt-5 pb-2 border-b border-gray-300 gap-2  lg:flex flex-row justify-between px-2 gap-4 w-full'>
-          <div className='md:flex lg:flex lg:flex-row items-center gap-1 mb-2'>
+        <div className='mt-5 pb-2 border-b border-gray-300 gap-2  xl:flex flex-row justify-between px-2 gap-4 w-full'>
+          <div className='md:flex lg:flex-row items-center gap-1 mb-2'>
             <div className='bg-blue-100 rounded-full px-1 py-1'>
               <CiGlobe size={50} />
             </div>

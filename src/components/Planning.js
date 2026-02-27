@@ -23,7 +23,7 @@ const Planning = () => {
                         Model what-if outcomes for growth, freezes, and attrition shocks - explainable outputs for leadership.
                     </p>
                 </div>
-                <div className='flex gap-2 justify-start items-center  px-4  shadow-md rounded-xl'>
+                <div className='flex gap-2 justify-start items-center  px-4 py-1  shadow-sm border-2 border-gray-30 rounded-xl'>
                     <LuGitCompare className="w-4 h-4 lg:w-6 lg:h-6" />
                     <span className='font-semibold'>
                         Compare scenarios
@@ -31,7 +31,7 @@ const Planning = () => {
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row justify-start gap-2 w-full'>
-                <div className='flex flex-col justify-start items-start gap-3 shadow-md w-[full] lg:w-[40%] rounded-md px-3 py-2'>
+                <div className='flex flex-col justify-start items-start gap-3 shadow-sm border-2 border-gray-30 w-[full] lg:w-[40%] rounded-md px-3 py-2'>
                     <div className='flex items-center justify-between w-full'>
                         <div className='flex flex-col items-start justify-start'>
                             <p className='font-bold text-lg'>
@@ -41,7 +41,7 @@ const Planning = () => {
                                 Adjust parameters and simulate outcomes
                             </p>
                         </div>
-                        <span className='font-bold shadow-md rounded-lg px-2 '>
+                        <span className='font-bold shadow-sm border-2 border-gray-30 rounded-lg px-2 '>
                             Editable
                         </span>
                     </div>
@@ -175,14 +175,14 @@ const Planning = () => {
                             Increases required HC for expansion, new product lines, or volume growth.
                         </p>
                     </div>
-                    <div className='flex gap-2 w-full text-sm lg:text-md'>
+                    <div className='flex gap-2 w-full '>
                         <button className='flex justify-center items-center gap-2 rounded-lg font-bold bg-black px-4 py-2 text-white w-1/2'>
                             <MdBookmarkAdd />
                             <span>
                                 Save
                             </span>
                         </button>
-                        <button className='flex justify-center items-center gap-2 rounded-lg font-bold px-4 py-2 w-1/2 shadow-md'>
+                        <button className='flex justify-center items-center gap-2 rounded-lg font-bold px-4 py-2 w-1/2 shadow-sm border-2 border-gray-30'>
                             <span>
                                 Reset
                             </span>
@@ -192,7 +192,7 @@ const Planning = () => {
                 </div>
                 <div className='flex flex-col w-[full] lg:w-[60%] gap-2'>
                     <div className='grid grid-cols-2 lg:grid-cols-3 w-full gap-2'>
-                        <div className='flex flex-col justify-start gap-2 items-start rounded-lg shadow-md px-4 py-3 '>
+                        <div className='flex flex-col justify-start gap-2 items-start rounded-lg shadow-sm border-2 border-gray-30 px-4 py-3 '>
                             <p className='font-semibold'>
                                 Projected HC
                             </p>
@@ -203,7 +203,7 @@ const Planning = () => {
                                 After attrition shock
                             </p>
                         </div>
-                        <div className='flex flex-col justify-start gap-2 items-start rounded-lg shadow-md px-4 py-3'>
+                        <div className='flex flex-col justify-start gap-2 items-start rounded-lg shadow-sm border-2 border-gray-30 px-4 py-3'>
                             <div className='flex flex-row justify-between items-center w-full'>
                                 <p className='text-left font-semibold'>
                                     HC Gap
@@ -220,7 +220,7 @@ const Planning = () => {
                                 Projected vs demand
                             </p>
                         </div>
-                        <div className='flex flex-col justify-start gap-2 items-start rounded-lg shadow-md px-4 py-3'>
+                        <div className='flex flex-col justify-start gap-2 items-start rounded-lg shadow-sm border-2 border-gray-30 px-4 py-3'>
                             <p className='text-sm font-semibold'>
                                 Cost impact
                             </p>
@@ -233,7 +233,7 @@ const Planning = () => {
                         </div>
 
                     </div>
-                    <div className=' flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 '>
+                    <div className=' flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4 '>
                         <p className='font-bold '>
                             Baseline vs Projected vs Demand
                         </p>
@@ -259,7 +259,7 @@ const Planning = () => {
                             </ResponsiveContainer>
                         </div>
                     </div>
-                    <div className='shadow-md flex flex-col px-4 py-2 rounded-md mt-2 lg:mt-0'>
+                    <div className='shadow-sm border-2 border-gray-30 flex flex-col px-4 py-2 rounded-md mt-2 lg:mt-0'>
                         <div className='flex flex-row justify-between items-center'>
                             <div className='flex flex-col justify-start items-start'>
                                 <p className='font-bold '>
@@ -269,11 +269,11 @@ const Planning = () => {
                                     Re-usable planning assumptions (institutional knowledge)
                                 </p>
                             </div>
-                            <span className='shadow-md rounded-xl px-1 font-bold'>
+                            <span className='shadow-sm border-2 border-gray-30 rounded-xl px-1 font-bold'>
                                 1
                             </span>
                         </div>
-                        <div className='flex shadow-md mt-4 rounded-md px-4 py-2'>
+                        <div className='flex shadow-sm border-2 border-gray-30 mt-4 rounded-md px-4 py-2'>
                             <div className='flex flex-row items-center justify-between w-full'>
                                 <div className='flex flex-col  justify-start items-start'>
                                     <p className='font-bold '>
@@ -283,7 +283,7 @@ const Planning = () => {
                                         Attr+0% - Freeze 0% - Demand+10%
                                     </p>
                                 </div>
-                                <div className='flex flex-row items-center gap-2 shadow-md px-4 rounded-lg '>
+                                <div className='flex flex-row items-center gap-2 shadow-sm border-2 border-gray-30 py-1 px-4 rounded-lg '>
                                     <LuGitCompare className="w-4 h-4 lg:w-6 lg:h-6" />
                                     <span className='font-bold'>Load</span>
                                 </div>

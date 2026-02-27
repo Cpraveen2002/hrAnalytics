@@ -13,12 +13,12 @@ const GlobalOPs = () => {
                         Asunc operations across APAC, EMEA, Brazil - with US-timezone coverage and institutional context.
                     </p>
                 </div>
-                <button className='flex gap-2 border-2 shadow-md px-2 rounded-full items-center'>
+                <button className='flex gap-2 border-2 shadow-sm border-2 border-gray-30 px-2 rounded-full items-center'>
                     <PiGitForkLight className="w-5 h-5 lg:w-7 lg:h-7" />
                     <span className='font-semibold'>Create Request</span>
                 </button>
             </div>
-            <div className='flex flex-col gap-4 border-2 mt-4 shadow-md rounded-xl px-4 py-2 w-full justify-start items-start'>
+            <div className='flex flex-col gap-4 border-2 border-gray-30 mt-4 shadow-sm rounded-xl px-4 py-2 w-full justify-start items-start'>
                 <div className='flex justify-between items-center w-full font-semibold'>
                     <div>
                         <p className='font-bold text-left'>
@@ -28,14 +28,14 @@ const GlobalOPs = () => {
                             Structured collabaration replacing email threads.
                         </p>
                     </div>
-                    <div className='flex gap-2 rounded-full border-2 shadow-md items-center px-4 py-1'>
+                    <div className='flex gap-2 rounded-full border-2 border-gray-30 shadow-sm items-center px-4 py-1'>
                         <CiClock2 className="w-4 h-4 lg:w-6 lg:h-6" />
                         <span className='font-semibold'>
                             US TZ Ready
                         </span>
                     </div>
                 </div>
-                <div className='flex flex-col gap-1 items-start  border-2 shadow-md rounded-xl w-full px-4 py-2'>
+                <div className='flex flex-col gap-1 items-start  border-2 border-gray-30 shadow-sm rounded-xl w-full px-4 py-2'>
                     <div className='flex justify-between items-center w-full mt-2'>
                         <div className='flex gap-3 items-start'>
                             <p className='font-bold text-lg lg:text-xl '>
@@ -47,7 +47,7 @@ const GlobalOPs = () => {
                             <span className='border-2 shadow-md font-bold rounded-full px-3 py-1 '>
                                 EMEA
                             </span>
-                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full'>
+                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full border-2 border-gray-30'>
                                 <CiClock2 className='w-5 h-5 lg:w-7 lg:h-7' />
                                 <span>
                                     SLA 8h
@@ -55,7 +55,7 @@ const GlobalOPs = () => {
                             </div>
                         </div>
                         <div className='hidden lg:flex gap-3'>
-                            <button className='border-2 shadow-md px-4 py-1 rounded-md font-bold ' >
+                            <button className='border-2 border-gray-30 shadow-sm px-4 py-1 rounded-md font-bold ' >
                                 Open
                             </button>
                             <button className='bg-black text-white px-4 py-1 rounded-md font-bold '>
@@ -71,7 +71,7 @@ const GlobalOPs = () => {
                             Confirm May cost deltas for R&D
                         </p>
                         <div className='flex gap-3 lg:hidden'>
-                            <button className='border-2 shadow-md px-4 py-1 rounded-md font-bold' >
+                            <button className='border-2 shadow-sm border-gray-30 px-4 py-1 rounded-md font-bold' >
                                 Open
                             </button>
                             <button className='bg-black text-white px-4 py-1 rounded-md font-bold'>
@@ -81,7 +81,7 @@ const GlobalOPs = () => {
                     </div>
 
                 </div>
-                <div className='flex flex-col gap-1 items-start  border-2 shadow-md rounded-xl w-full px-4 py-2'>
+                <div className='flex flex-col gap-1 items-start  border-2 shadow-sm border-gray-30 rounded-xl w-full px-4 py-2'>
                     <div className='flex justify-between items-center w-full mt-2'>
                         <div className='flex gap-3 items-start'>
                             <p className='text-lg lg:text-xl font-bold'>
@@ -93,7 +93,7 @@ const GlobalOPs = () => {
                             <span className='border-2 shadow-md font-bold rounded-full px-3 py-1 '>
                                 APAC
                             </span>
-                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full'>
+                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full border-2 border-gray-30'>
                                 <CiClock2 className='w-5 h-5 lg:w-7 lg:h-7' />
                                 <span>
                                     SLA 8h
@@ -117,17 +117,17 @@ const GlobalOPs = () => {
                             FY workforce plan revisions
                         </p>
                         <div className='flex gap-3 lg:hidden'>
-                            <button className='border-2 shadow-md px-4 py-1 rounded-md font-bold text-sm lg:text-md' >
+                            <button className='border-2 shadow-sm border-gray-30 px-4 py-1 rounded-md font-bold ' >
                                 Open
                             </button>
-                            <button className='bg-black text-white px-4 py-1 rounded-md font-bold text-sm lg:text-md'>
+                            <button className='bg-black text-white px-4 py-1 rounded-md font-bold '>
                                 Respond
                             </button>
                         </div>
                     </div>
 
                 </div>
-                <div className='flex flex-col gap-1 items-start  border-2 shadow-md rounded-xl w-full px-4 py-2'>
+                <div className='flex flex-col gap-1 items-start  border-2 border-gray-30 shadow-sm rounded-xl w-full px-4 py-2'>
                     <div className='flex justify-between items-center w-full mt-2'>
                         <div className='flex gap-3 items-start'>
                             <p className='text-lg lg:text-xl font-bold'>
@@ -139,7 +139,7 @@ const GlobalOPs = () => {
                             <span className='border-2 shadow-md font-bold rounded-full px-3 py-1 '>
                                 EMEA
                             </span>
-                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full '>
+                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full border-2 border-gray-30'>
                                 <CiClock2 className='w-5 h-5 lg:w-7 lg:h-7' />
                                 <span>
                                     SLA 8h
@@ -163,7 +163,7 @@ const GlobalOPs = () => {
                             Confirm May cost deltas for R&D
                         </p>
                         <div className='flex gap-3 lg:hidden'>
-                            <button className='border-2 shadow-md px-4 py-1 rounded-md font-bold ' >
+                            <button className='border-2 shadow-sm border-gray-30 px-4 py-1 rounded-md font-bold ' >
                                 Open
                             </button>
                             <button className='bg-black text-white px-4 py-1 rounded-md font-bold'>
@@ -173,7 +173,7 @@ const GlobalOPs = () => {
                     </div>
 
                 </div>
-                <div className='flex flex-col gap-1 items-start  border-2 shadow-md rounded-xl w-full px-4 py-2'>
+                <div className='flex flex-col gap-1 items-start  border-2 shadow-sm border-gray-30 rounded-xl w-full px-4 py-2'>
                     <div className='flex justify-between items-center w-full mt-2'>
                         <div className='flex gap-3 items-start'>
                             <p className='text-lg lg:text-xl font-bold'>
@@ -185,7 +185,7 @@ const GlobalOPs = () => {
                             <span className='border-2 shadow-md font-bold rounded-full px-3 py-1 '>
                                 EMEA
                             </span>
-                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full'>
+                            <div className='flex items-center gap-2 font-bold bg-gray-200 px-3 py-1 rounded-full border-2 border-gray-30'>
                                 <CiClock2 className='w-5 h-5 lg:w-7 lg:h-7' />
                                 <span>
                                     SLA 8h

@@ -25,7 +25,7 @@ const COLORS = ["#ef4444", "#f59e0b", "#22c55e",];
 const Risk = () => {
     return (
         <div className='flex flex-col gap-3 px-4 py-3 w-full justify-start items-start '>
-            <div className='flex md:flex-row lg:flex-row justify-between gap-2  w-full items-center'>
+            <div className='flex md:flex-row lg:flex-row justify-between gap-2 w-full items-center'>
                 <div className='flex flex-col justify-start items-start'>
                     <p className='text left font-bold text-lg'>
                         Attrition & Retention Intelligence
@@ -34,13 +34,13 @@ const Risk = () => {
                         Early warning + root-cause signals-move from reactive exits to proactive retention.
                     </p>
                 </div>
-                <button className='flex gap-1 shadow-md rounded-xl px-2 py-1'>
+                <button className='flex gap-1 shadow-sm border-2 border-gray-30 rounded-xl px-2 py-1'>
                     <PiGitForkLight className="w-4 h-4 lg:w-6 lg:h-6" />
                     <span className='font-semibold'>Create Retention Action</span>
                 </button>
             </div>
             <div className='flex flex-col md:flex-row lg:flex-row gap-2 w-full'>
-                <div className='w-[75%] flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 '>
+                <div className='w-[75%] flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4 '>
                     <p className='font-bold'>
                         Risk Segmentation
                     </p>
@@ -68,7 +68,7 @@ const Risk = () => {
                         </ResponsiveContainer>
                     </div>
                 </div>
-                <div className='w-[75%] flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 '>
+                <div className='w-[75%] flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4 '>
                     <p className='font-bold'>
                         Attrition Trend
                     </p>
@@ -95,7 +95,7 @@ const Risk = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col justify-start items-start shadow-md rounded-md w-full px-1 py-2'>
+            <div className='flex flex-col justify-start items-start shadow-sm border-2 border-gray-30 rounded-md w-full px-2 py-2'>
                 <div className='flex justify-between items-center w-full'>
                     <div>
                         <p className='text-left font-bold '>
@@ -105,7 +105,7 @@ const Risk = () => {
                             Filtered by region and search-shared only with authorized roles.
                         </p>
                     </div>
-                    <div className='flex flex-row gap-2 justify-start items-center shadow-md rounded-xl px-2 '>
+                    <div className='flex flex-row gap-2 justify-start items-center shadow-sm border-2 border-gray-30 rounded-md px-2 py-1'>
                         <AiOutlineSafetyCertificate className="w-4 h-4 lg:w-6 lg:h-6" />
                         <span className='font-semibold'>Access granted</span>
                     </div>
@@ -113,7 +113,7 @@ const Risk = () => {
                 <div className='w-full'>
                     <table className=" font-semibold w-full">
                         <thead className=''>
-                            <tr className="text-gray-400 border-b">
+                            <tr className="text-gray-400 border-b-2">
                                 <th className="px-6 py-2">Role</th>
                                 <th className="px-6 py-2">Region</th>
                                 <th className="px-6 py-2">Team</th>
@@ -126,7 +126,7 @@ const Risk = () => {
                         <tbody>
                             {tableData.map((data) => {
                                 return (
-                                    <tr className="border-b last:border-b-0">
+                                    <tr className="border-b-2 last:border-b-0">
                                         <td className="">{data.role}</td>
                                         <td className="">{data.region}</td>
                                         <td className="">{data.team}</td>

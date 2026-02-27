@@ -16,7 +16,7 @@ const ActionCenter = () => {
                         Turn insights into action: approvals, playbooks, reminders and  operational follow-through.
                     </p>
                 </div>
-                <button className='flex gap-2 rounded-md bg-black text-white items-center px-4 py-2 font-semibold'>
+                <button className='flex gap-2 rounded-md bg-black text-white items-center px-4 py-2 font-semibold border-2 border-gray-30'>
                     <CiCircleCheck size={24} />
                     <span>
                         Create Action
@@ -43,7 +43,7 @@ const ActionCenter = () => {
                         Need decision
                     </p>
                 </div>
-                <div className='flex flex-col gap-1 shadow-md rounded-md justify-start items-start px-4 py-3'>
+                <div className='flex flex-col gap-1 shadow-sm border-2 border-gray-30 rounded-md justify-start items-start px-4 py-3'>
                     <div className='flex justify-between items-center w-full'>
                         <p className='text-left text-gray-500 font-bold'>
                             Active Playbooks
@@ -56,7 +56,7 @@ const ActionCenter = () => {
                         Reusable workflows
                     </p>
                 </div>
-                <div className='flex flex-col gap-1 shadow-md rounded-md justify-start items-start px-4 py-3'>
+                <div className='flex flex-col gap-1 shadow-sm border-2 border-gray-30 rounded-md justify-start items-start px-4 py-3'>
                     <div className='flex justify-between items-center w-full'>
                         <p className='text-left text-gray-500 font-bold'>
                             Remiders
@@ -71,7 +71,7 @@ const ActionCenter = () => {
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row gap-2 w-full'>
-                <div className='flex flex-col  gap-2 px-4 py-2 rounded-md shadow-md lg:w-[50%]'>
+                <div className='flex flex-col  gap-2 px-4 py-2 rounded-md shadow-sm border-2 border-gray-30 lg:w-[50%]'>
                     <div className='flex items-center justify-between w-full'>
                         <div>
                             <p className='font-bold text-left'>
@@ -81,22 +81,22 @@ const ActionCenter = () => {
                                 Governed decisions with accountability.
                             </p>
                         </div>
-                        <div className='flex gap-2 rounded-lg shadow-md px-3 py-1 font-bold'>
+                        <div className='flex gap-2 rounded-lg shadow-sm border-2 border-gray-30 px-3 py-1 font-bold'>
                             <MdOutlineEventNote size={24} />
                             <span>
                                 Queue
                             </span>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-3 shadow-md rounded-lg px-4 py-2'>
+                    <div className='flex flex-col gap-3 shadow-sm border-2 border-gray-30 rounded-lg px-4 py-2'>
                         <div className='flex gap-2 justify-between items-center items-center w-full'>
                             <p className='font-bold text-lg text-left'>
                                 APR-301
                             </p>
                             <div className='flex justify-between items-center gap-2'>
                                 <span className='font-semibold bg-red-500 text-white rounded-full px-2 py-1'>Pending</span>
-                                <span className='font-bold shadow-md px-2 py-1 rounded-full'>EMEA</span>
-                                <span className='font-bold gap-2 flex rounded-full bg-blue-100 px-2 py-1'>
+                                <span className='font-bold shadow-sm border-2 border-gray-30 px-2 py-1 rounded-full'>EMEA</span>
+                                <span className='font-bold gap-2 flex rounded-full bg-blue-100 px-2 py-1 border-2 border-gray-30'>
                                     <AiOutlineClockCircle size={24} />
                                     <span>Today</span>
                                 </span>
@@ -112,20 +112,20 @@ const ActionCenter = () => {
                                 </p>
                             </div>
                             <div className='flex gap-2'>
-                                <button className='shadow-md font-bold rounded-md px-2 py-1'>Open</button>
+                                <button className='shadow-sm border-2 border-gray-30 font-bold rounded-md px-2 py-1'>Open</button>
                                 <button className='bg-black font-bold text-white rounded-md px-2 py-1'> Approve</button>
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-3 shadow-md rounded-lg px-4 py-2'>
+                    <div className='flex flex-col gap-3 shadow-sm border-2 border-gray-30 rounded-lg px-4 py-2'>
                         <div className='flex gap-2 justify-between items-center items-center w-full'>
                             <p className='font-bold text-lg text-left'>
                                 APR-317
                             </p>
                             <div className='flex justify-between items-center gap-2'>
                                 <span className='font-semibold bg-red-500 text-white rounded-full px-2 py-1'>Pending</span>
-                                <span className='font-bold shadow-md px-2 py-1 rounded-full'>EMEA</span>
-                                <span className='font-bold gap-2 flex rounded-full bg-blue-100 px-2 py-1'>
+                                <span className='font-bold shadow-sm border-2 border-gray-30 px-2 py-1 rounded-full'>EMEA</span>
+                                <span className='font-bold gap-2 flex rounded-full bg-blue-100 px-2 py-1 border-2 border-gray-30'>
                                     <AiOutlineClockCircle size={24} />
                                     <span>Tomorrow</span>
                                 </span>
@@ -141,12 +141,12 @@ const ActionCenter = () => {
                                 </p>
                             </div>
                             <div className='flex gap-2'>
-                                <button className='shadow-md font-bold rounded-md px-2 py-1'>Open</button>
+                                <button className='shadow-sm border-2 border-gray-30 font-bold rounded-md px-2 py-1'>Open</button>
                                 <button className='bg-black font-bold text-white rounded-md px-2 py-1'> Approve</button>
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-3 shadow-md rounded-lg px-4 py-2'>
+                    <div className='flex flex-col gap-3 shadow-sm border-2 border-gray-30 rounded-lg px-4 py-2'>
                         <div className='flex gap-2 justify-between items-center items-center w-full'>
                             <p className='font-bold text-lg text-left'>
                                 APR-330
@@ -154,7 +154,7 @@ const ActionCenter = () => {
                             <div className='flex justify-between items-center gap-2'>
                                 <span className='font-semibold bg-blue-100 font-bold 
                                 rounded-full px-2 py-1'>In review</span>
-                                <span className='font-bold shadow-md px-2 py-1 rounded-full'>EMEA</span>
+                                <span className='font-bold shadow-sm border-2 border-gray-30 px-2 py-1 rounded-full'>EMEA</span>
                                 <span className='font-bold gap-2 flex rounded-full bg-blue-100 px-2 py-1'>
                                     <AiOutlineClockCircle size={24} />
                                     <span>2d</span>
@@ -171,13 +171,13 @@ const ActionCenter = () => {
                                 </p>
                             </div>
                             <div className='flex gap-2'>
-                                <button className='shadow-md font-bold rounded-md px-2 py-1'>Open</button>
+                                <button className='shadow-sm border-2 border-gray-30 font-bold rounded-md px-2 py-1'>Open</button>
                                 <button className='bg-black font-bold text-white rounded-md px-2 py-1'> Approve</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col gap-3 shadow-md px-4 py-2 rounded-md lg:w-[50%]'>
+                <div className='flex flex-col gap-3 shadow-sm border-2 border-gray-30 px-4 py-2 rounded-md lg:w-[50%]'>
                     <div className='flex items-center w-full justify-between'>
                         <div>
                             <p className='text-left font-bold'>
@@ -187,19 +187,19 @@ const ActionCenter = () => {
                                 Operations repeatable HR actions.
                             </p>
                         </div>
-                        <div className='flex rounded-full shadow-md px-2 py-1 font-bold gap-2 items-center'>
+                        <div className='flex rounded-full shadow-sm border-2 border-gray-30 px-2 py-1 font-bold gap-2 items-center'>
                             < PiGitForkLight />
                             <span>
                                 Playbooks
                             </span>
                         </div>
                     </div>
-                    <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-md'>
+                    <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-sm border-2 border-gray-30'>
                         <div className='flex w-full justify-between items-center'>
                             <p className='font-bold text-left text-lg'>
                                 High Performer- Retention
                             </p>
-                            <span className='font-semibold bg-blue-100 rounded-full px-2 py-1'>
+                            <span className='font-semibold bg-blue-100 rounded-full px-2 py-1 border-2 border-gray-30'>
                                 Owner: HR Ops
                             </span>
                         </div>
@@ -210,16 +210,16 @@ const ActionCenter = () => {
                             <p>4.Growth plann</p>
                         </div>
                         <div className='flex gap-2 items-center'>
-                            <button className='font-bold rounded-md px-4 py-1 shadow-md'>View</button>
+                            <button className='font-bold rounded-md px-4 py-1 shadow-sm border-2 border-gray-30'>View</button>
                             <button className='font-bold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
                         </div>
                     </div>
-                    <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-md'>
+                    <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-sm border-2 border-gray-30'>
                         <div className='flex w-full justify-between items-center'>
                             <p className='font-bold text-left text-lg'>
                                 Hiring Freeze-Critical Roles
                             </p>
-                            <span className='font-semibold bg-blue-100 rounded-full px-2 py-1'>
+                            <span className='font-semibold bg-blue-100 rounded-full px-2 py-1 border-2 border-gray-30'>
                                 Owner: HR Ops
                             </span>
                         </div>
@@ -230,16 +230,16 @@ const ActionCenter = () => {
                             <p>4.Quarterly review</p>
                         </div>
                         <div className='flex gap-2 items-center'>
-                            <button className='font-bold rounded-md px-4 py-1 shadow-md'>View</button>
+                            <button className='font-bold rounded-md px-4 py-1 shadow-sm border-2 border-gray-30'>View</button>
                             <button className='font-bold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
                         </div>
                     </div>
-                    <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-md'>
+                    <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-sm border-2 border-gray-30'>
                         <div className='flex w-full justify-between items-center'>
                             <p className='font-bold text-left text-lg'>
                                 Data Integrity - Monthly Close
                             </p>
-                            <span className='font-semibold bg-blue-100 rounded-full px-2 py-1'>
+                            <span className='font-semibold bg-blue-100 rounded-full px-2 py-1 border-2 border-gray-30'>
                                 Owner: HR Ops
                             </span>
                         </div>
@@ -250,11 +250,11 @@ const ActionCenter = () => {
                             <p>4.Certify outputs</p>
                         </div>
                         <div className='flex gap-2 items-center'>
-                            <button className='font-bold rounded-md px-4 py-1 shadow-md'>View</button>
+                            <button className='font-bold rounded-md px-4 py-1 shadow-sm border-2 border-gray-30'>View</button>
                             <button className='font-bold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-2 px-4 py-2 bg-blue-50 shadow-md rounded-md w-full'>
+                    <div className='flex flex-col gap-2 px-4 py-2 bg-blue-50 shadow-sm border-2 border-gray-30 rounded-md w-full'>
                         <div className='flex font-semibold gap-2 items-center text-xl'>
                             <FiBell size={24} />
                             <span>Reminders</span>
@@ -263,7 +263,7 @@ const ActionCenter = () => {
                             <p className='text-left font-semibold text-gray-500'>
                                 US TZ overlap check-in
                             </p>
-                            <span className='font-bold shadow-md px-3 py-1 bg-white rounded-full'>
+                            <span className='font-bold shadow-sm border-2 border-gray-30 px-3 py-1 bg-white rounded-full'>
                                 Daily
                             </span>
                         </div>
@@ -271,7 +271,7 @@ const ActionCenter = () => {
                             <p className='text-left font-semibold text-gray-500'>
                                 Planful variance notes
                             </p>
-                            <span className='font-bold shadow-md px-3 py-1 bg-white rounded-full'>
+                            <span className='font-bold shadow-sm border-2 border-gray-30 px-3 py-1 bg-white rounded-full'>
                                 Montly colse
                             </span>
                         </div>
@@ -279,7 +279,7 @@ const ActionCenter = () => {
                             <p className='text-left font-semibold text-gray-500'>
                                 Performance data completeness
                             </p>
-                            <span className='font-bold shadow-md px-3 py-1 bg-white rounded-full'>
+                            <span className='font-bold shadow-sm border-2 border-gray-30 px-3 py-1 bg-white rounded-full'>
                                 Weekly
                             </span>
                         </div>

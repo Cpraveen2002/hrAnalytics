@@ -19,7 +19,7 @@ const Governance = () => {
                         Reconciliations, issue tracking, audit trails - build trust for a global data-driven HR Ops model.
                     </p>
                 </div>
-                <div className='flex bg-blue-50 items-center px-2 py-1 rounded-full'>
+                <div className='flex bg-blue-50 items-center px-2 py-1 rounded-full  border-2 border-gray-30'>
                     <CiDatabase className="w-5 h-5 lg:w-8 lg:h-8" />
                     <p className='font-bold '>
                         Single Source of Truth
@@ -46,7 +46,7 @@ const Governance = () => {
                         Across Systems
                     </p>
                 </div>
-                <div className='flex flex-col gap-2 shadow-md  rounded-md justify-start items-start px-4 py-4'>
+                <div className='flex flex-col gap-2 shadow-sm border-2 border-gray-30  rounded-md justify-start items-start px-4 py-4'>
                     <div className='flex w-full justify-between'>
                         <p className='text-left font-bold text-gray-500 '>
                             Reconciliation
@@ -59,7 +59,7 @@ const Governance = () => {
                         Last run: Today
                     </p>
                 </div>
-                <div className='flex flex-col gap-2 shadow-md  rounded-md justify-start items-start px-4 py-4'>
+                <div className='flex flex-col gap-2 shadow-sm border-2 border-gray-30  rounded-md justify-start items-start px-4 py-4'>
                     <div className='flex w-full justify-between'>
                         <p className='text-left font-bold text-gray-500 '>
                             Audit Trail
@@ -73,7 +73,7 @@ const Governance = () => {
                     </p>
                 </div>
             </div>
-            <div className='flex flex-col gap-2 shadow-md rounded-md px-4 py-2 w-full items-start'>
+            <div className='flex flex-col gap-2 shadow-sm border-2 border-gray-30 rounded-md px-4 py-2 w-full items-start'>
                 <div className='flex items-center justify-between w-full'>
                     <div className='flex flex-col items-start'>
                         <p className='font-bold  '>
@@ -90,7 +90,7 @@ const Governance = () => {
                 </div>
                 <table className='w-full'>
                     <thead>
-                        <tr className="border-b text-gray-500">
+                        <tr className="border-b-2 text-gray-500">
                             <th className=" px-6 py-2 ">ID</th>
                             <th className=" px-6 py-2 ">Severity</th>
                             <th className="px-6 py-2  ">System</th>
@@ -107,14 +107,14 @@ const Governance = () => {
                                     <tr className="border-b last:border-0 font-semibold ">
                                         <td className="px-3 py-4 ">{item.id}</td>
                                         <td className="px-3py-4 ">
-                                            {item.serverity === "High" && <span className="rounded-full bg-red-500 px-3 py-1 text-xs font-medium text-white">
+                                            {item.serverity === "High" && <span className="rounded-full bg-red-500 px-3 py-1  font-bold text-white">
                                                 High
                                             </span>}
-                                            {item.serverity === "Medium" && <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold">
+                                            {item.serverity === "Medium" && <span className="rounded-full bg-blue-50 px-3 py-1  font-bold">
                                                 Medium
                                             </span>}
                                             {
-                                                item.serverity === "Low" && <span className="rounded-full shadow-md px-3 py-1 text-xs font-bold">
+                                                item.serverity === "Low" && <span className="rounded-full shadow-md px-3 py-1 font-bold">
                                                     Low
                                                 </span>
                                             }

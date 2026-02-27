@@ -22,13 +22,13 @@ const Talent = () => {
                         Calibrated talent views that support workforce planning and performance management.
                     </p>
                 </div>
-                <div className='flex border-2 gap-2 border-gray-30 rounded-full px-2 py-1'>
+                <div className='flex shadow-sm border-2 gap-2 border-gray-30 rounded-full px-2 py-1'>
                     <BiCategoryAlt className="w-5 h-5 lg:w-7 lg:h-7" />
                     <span className='font-semibold'>Calibration-ready</span>
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row gap-2 w-full'>
-                <div className='flex flex-col  gap-2 shadow-md rounded-md px-4 py-2  justify-start items-start lg:w-[50%]'>
+                <div className='flex flex-col  gap-2 shadow-sm border-2 border-gray-30 rounded-md px-4 py-2  justify-start items-start lg:w-[50%]'>
                     <div className='flex flex-col items-start'>
                         <p className='font-bold '>
                             Talent Signals Radar
@@ -63,7 +63,7 @@ const Talent = () => {
                         </ResponsiveContainer>
                     </div>
                 </div>
-                <div className='flex flex-col gap-2 px-4 py-2 shadow-md rounded-md'>
+                <div className='flex flex-col gap-2 px-4 py-2 shadow-sm border-2 border-gray-30 rounded-md xl:w-[50%]'>
                     <div>
                         <p className='text-left font-bold text-lg'>
                             9-Box Talent Grid(Counts)
@@ -158,7 +158,7 @@ const Talent = () => {
                         </div>
                     </div>
                     <div className='flex  w-full justify-between'>
-                        <button className='flex gap-2 rounded-md px-2 py-1 shadow-md font-bold items-center'>
+                        <button className='flex gap-2 rounded-md px-2 py-1 shadow-sm border-2 border-gray-30 font-bold items-center'>
                             <PiStarFour className="w-4 h-4 lg:w-6 lg:h-6" />
                             <span className='text-left'>
                                 Create Calibration Notes
