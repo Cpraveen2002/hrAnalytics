@@ -27,8 +27,8 @@ function App() {
           </div>
           <div className='flex flex-row items-center justify-between gap-4 items-center w-full lg:w-auto '>
             <input type="text" placeholder='Search people signals,teams' className='shadow-md border-2 rounded-md px-8 py-2 text-lg' />
-            <div className=' md:flex  lg:flex  ml-2 justify-between items-center shadow-sm rounded-md px-12 py-2 border-2 border-gray-30'>
-              <div className='mr-2 flex flex-row justify-start items-center font-bold lg:text-lg'>
+            <div className='hidden md:flex  lg:flex  ml-2 justify-between items-center shadow-md rounded-md px-12 py-2'>
+              <div className='mr-2 flex flex-row justify-start items-center font-bold lg:text-lg border-2'>
                 <p>Global</p>
               </div>
               <div className='ml-2 flex flex-row justify-end items-center'>
@@ -38,7 +38,7 @@ function App() {
 
             </div>
 
-            <div className='ml-2 flex flex-row justify-around items-center shadow-sm rounded-md px-8 py-2 border-2 border-gray-30'>
+            <div className='ml-2 flex flex-row justify-around items-center shadow-md rounded-md px-8 py-2'>
               <div className='mr-2'>
                 <CiUser className='w-4 h-4 lg:w-6 lg:h-6' style={{ strokeWidth: 1.5 }} />
               </div>
@@ -48,7 +48,7 @@ function App() {
               </select >
             </div>
 
-            <div className='flex ml-2 lg:flex flex-row justify-around items-center font-bold shadow-sm rounded-md px-12 py-2 border-2 border-gray-30'>
+            <div className='flex ml-2 lg:flex flex-row justify-around items-center font-bold shadow-md rounded-md px-12 py-2'>
               <FiBell size={20} />
 
               <p className='ml-2 lg:text-lg'>Notifications</p>
@@ -66,20 +66,20 @@ function App() {
           </div>
           <div className='flex flex-col justify-start items-start '>
             <div className='flex flex-row justify-start items-center'>
-              <div className='flex bg-blue-100 gap-1 rounded-lg justify-center items-center px-2 py-1 border-2 border-gray-30'>
+              <div className='flex bg-blue-100 gap-1 rounded-lg justify-center items-center px-2 py-1'>
                 <CiDatabase className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1.5 }} />
-                <p className='text-lg lg:text-xl font-semibold text-left '>
+                <p className='text-lg lg:text-xl font-semibold text-left'>
                   Data Health:98%
                 </p>
               </div>
-              <div className='flex shadow-sm rounded-lg justify-center items-center ml-4 px-4 py-1 gap-2 border-2 border-gray-30'>
+              <div className='flex shadow-md rounded-lg justify-center items-center ml-4 px-4 gap-2'>
                 <CiClock2 className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1.5 }} />
                 <p className='text-lg lg:text-xl font-semibold text-left px-1'>
                   Last Refresh: Today 08:45 AM (IST)
                 </p>
               </div>
             </div>
-            <button className='flex shadow-sm rounded-md mt-2 justify-center items-center py-2 px-2 gap-2 border-2 border-gray-30'>
+            <button className='flex shadow-md rounded-md mt-2 justify-center items-center py-2 px-2 gap-2'>
               <CiImport className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1.5 }} />
               <p className='text-lg lg:text-xl font-bold flex'>
                 Export <span className='hidden'>(excel)</span>
@@ -88,7 +88,7 @@ function App() {
           </div>
         </div>
         <DashBoard />
-        <div className='flex flex-col lg:flex-row justify-between items-start mt-5 gap-4 w-full'>
+        <div className='flex flex-col lg:flex-row justify-between items-start mt-5 gap-4 w-full relative'>
           <Module />
           <Tabbar />
         </div>
