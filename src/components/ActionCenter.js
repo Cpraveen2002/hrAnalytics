@@ -9,14 +9,14 @@ const ActionCenter = () => {
         <div className='flex flex-col justify-start items-start gap-3 px-4 py-2 mt-2 w-full'>
             <div className='flex items-center justify-between w-full'>
                 <div className='flex flex-col items-start'>
-                    <p className='font-bold text-xl'>
+                    <p className='font-bold text-lg'>
                         Action Center
                     </p>
                     <p className='text-left text-gray-500 font-semibold'>
                         Turn insights into action: approvals, playbooks, reminders and  operational follow-through.
                     </p>
                 </div>
-                <button className='flex gap-2 rounded-md bg-black text-white items-center px-4 py-2'>
+                <button className='flex gap-2 rounded-md bg-black text-white items-center px-4 py-2 font-semibold'>
                     <CiCircleCheck size={24} />
                     <span>
                         Create Action
@@ -26,7 +26,7 @@ const ActionCenter = () => {
             <div className='grid grid-cols-2 lg:grid-cols-3 gap-2 w-full '>
                 <div className='flex flex-col gap-1 border-2 border-red-200 rounded-md justify-start items-start px-4 py-3'>
                     <div className='flex justify-between items-center w-full'>
-                        <p className='text-left text-gray-500 font-semibold'>
+                        <p className='text-left text-gray-500 font-bold'>
                             Pending Approvals
                         </p>
                         <div className='flex gap-2 justify-start items-center bg-red-500 text-white font-semibold rounded-full px-1 py-1'>
@@ -39,33 +39,33 @@ const ActionCenter = () => {
                     <p className='font-bold text-2xl'>
                         3
                     </p>
-                    <p className='text-gray-500 text-left'>
+                    <p className='text-gray-500 text-left font-semibold'>
                         Need decision
                     </p>
                 </div>
                 <div className='flex flex-col gap-1 shadow-md rounded-md justify-start items-start px-4 py-3'>
                     <div className='flex justify-between items-center w-full'>
-                        <p className='text-left text-gray-500 font-semibold'>
+                        <p className='text-left text-gray-500 font-bold'>
                             Active Playbooks
                         </p>
                     </div>
                     <p className='font-bold text-2xl'>
                         3
                     </p>
-                    <p className='text-gray-500 text-left'>
+                    <p className='text-gray-500 text-left font-semibold'>
                         Reusable workflows
                     </p>
                 </div>
                 <div className='flex flex-col gap-1 shadow-md rounded-md justify-start items-start px-4 py-3'>
                     <div className='flex justify-between items-center w-full'>
-                        <p className='text-left text-gray-500 font-semibold'>
+                        <p className='text-left text-gray-500 font-bold'>
                             Remiders
                         </p>
                     </div>
                     <p className='font-bold text-2xl'>
                         3
                     </p>
-                    <p className='text-gray-500 text-left'>
+                    <p className='text-gray-500 text-left font-semibold'>
                         Recurring ops
                     </p>
                 </div>
@@ -210,8 +210,8 @@ const ActionCenter = () => {
                             <p>4.Growth plann</p>
                         </div>
                         <div className='flex gap-2 items-center'>
-                            <button className='font-semibold rounded-md px-4 py-1 shadow-md'>View</button>
-                            <button className='font-semibold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
+                            <button className='font-bold rounded-md px-4 py-1 shadow-md'>View</button>
+                            <button className='font-bold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
                         </div>
                     </div>
                     <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-md'>
@@ -230,8 +230,8 @@ const ActionCenter = () => {
                             <p>4.Quarterly review</p>
                         </div>
                         <div className='flex gap-2 items-center'>
-                            <button className='font-semibold rounded-md px-4 py-1 shadow-md'>View</button>
-                            <button className='font-semibold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
+                            <button className='font-bold rounded-md px-4 py-1 shadow-md'>View</button>
+                            <button className='font-bold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
                         </div>
                     </div>
                     <div className='flex flex-col justify-start gap-2 items-start px-4 py-2 rounded-md w-full shadow-md'>
@@ -250,8 +250,8 @@ const ActionCenter = () => {
                             <p>4.Certify outputs</p>
                         </div>
                         <div className='flex gap-2 items-center'>
-                            <button className='font-semibold rounded-md px-4 py-1 shadow-md'>View</button>
-                            <button className='font-semibold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
+                            <button className='font-bold rounded-md px-4 py-1 shadow-md'>View</button>
+                            <button className='font-bold rounded-md px-4 py-1 bg-black text-white'>Run Playbook</button>
                         </div>
                     </div>
                     <div className='flex flex-col gap-2 px-4 py-2 bg-blue-50 shadow-md rounded-md w-full'>

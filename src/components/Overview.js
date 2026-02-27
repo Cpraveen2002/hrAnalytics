@@ -55,23 +55,23 @@ const Overview = () => {
         <div className='flex flex-col justify-start items-start w-full gap-4'>
             <div className='gap-4 flex-col md:flex md:flex-row md:items-start lg:flex-row justify:start lg:justify-between items-start w-full'>
                 <div className='flex gap-2 flex-col justify-start items-start '>
-                    <p className='text-md lg:text-lg font-bold'>
+                    <p className='text-lg font-bold'>
                         Executive Overview
                     </p>
-                    <p className='text-left text-gray-500 text-sm lg:text-md font-semibold'>
+                    <p className='text-left text-gray-500 font-semibold'>
                         Global posture, certified numbers, and drills-downs for leadership + HR Ops.
                     </p>
                 </div>
                 <div className='flex flex-row justify-between lg:justify-end gap-3 mt-4'>
                     <div className='flex gap-2 justify-start items-center shadow-md px-4 py-1 rounded-xl'>
                         <FiAlertTriangle className='w-4 h-4 lg:w-6 lg:h-6' />
-                        <p className='text-left font-semibold text-sm lg:text-md'>
+                        <p className='text-left font-semibold text-lg'>
                             View Alerts
                         </p>
                     </div>
                     <div className='flex gap-2 justify-start items-center shadow-md px-4 py-1 rounded-xl'>
                         <AiOutlineFileExcel className="w-4 h-4 lg:w-6 lg:h-6" />
-                        <p className='text-left font-semibold text-sm lg:text-md'>
+                        <p className='text-left font-semibold text-lg'>
                             Open in Excel
                         </p>
                     </div>
@@ -84,12 +84,12 @@ const Overview = () => {
 
                 }} className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
                     <div className='flex flex-row justify-between items-start gap-4' >
-                        <p className='text-md lg:text-lg font-bold'>
+                        <p className='text-lg font-bold'>
                             APAC
                         </p>
                         <div className='flex gap-1 justify-start items-center px-4 py-1 shadow-md rounded-xl'>
                             <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <span className='text-sm lg:text-md'>
+                            <span className=''>
                                 Drill down
                             </span>
                         </div>
@@ -97,19 +97,19 @@ const Overview = () => {
                     <p className='font-bold text-xl lg:text-2xl'>
                         420
                     </p>
-                    <p className='text-gray-500 font-semibold text-sm lg:text-md'>
+                    <p className='text-gray-500 font-semibold text-lg'>
                         Open Roles: 28
                     </p>
                 </button>
                 <button type='button' onClick={() => { setOpen(true) }} className=' flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
                     <div className='flex flex-row justify-between items-start gap-4'>
 
-                        <p className='text-md lg:text-lg font-bold'>
+                        <p className='text-lg font-bold'>
                             EMEA
                         </p>
                         <div className='flex gap-1 justify-start items-center  px-4 py-1 shadow-md rounded-xl'>
                             <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-sm lg:text-md'>
+                            <p className='text-lg'>
                                 Drill down
                             </p>
                         </div>
@@ -117,39 +117,39 @@ const Overview = () => {
                     <p className='font-bold text-xl lg:text-2xl'>
                         310
                     </p>
-                    <p className='text-gray-500 font-semibold text-sm lg:text-md '>
+                    <p className='text-gray-500 font-semibold text-lg'>
                         Open Roles: 22
                     </p>
                 </button>
                 <button type='button' onClick={() => { setOpen(true) }} className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
                     <div className='flex flex-row justify-between items-start gap-4'>
 
-                        <p className='text-md lg:text-lg font-bold'>
+                        <p className='text-lg font-bold'>
                             Brazil
                         </p>
                         <div className='flex gap-1 justify-start items-center px-4 py-1 shadow-md rounded-xl'>
                             <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-sm lg:text-md'>
+                            <p className='text-lg'>
                                 Drill down
                             </p>
                         </div>
                     </div>
-                    <p className='font-bold text-xl lg:2xl'>
+                    <p className='font-bold text-xl lg:text-2xl'>
                         180
                     </p>
-                    <p className='text-gray-500 font-semibold text-sm lg:text-md'>
+                    <p className='text-gray-500 font-semibold text-lg'>
                         Open Roles: 28
                     </p>
                 </button>
                 <button type='button' onClick={() => { setOpen(true) }} className='flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4'>
                     <div className='flex flex-row justify-between items-start gap-4'>
 
-                        <p className=' text-left text-md lg:text-lg font-bold'>
+                        <p className=' text-left text-lg font-bold'>
                             North America
                         </p>
                         <div className='flex gap-1 justify-start items-center px-4 py-1 shadow-md rounded-xl'>
                             <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-sm lg:text-md'>
+                            <p className='text-lg'>
                                 Drill down
                             </p>
                         </div>
@@ -157,7 +157,7 @@ const Overview = () => {
                     <p className='font-bold text-xl lg:text-2xl'>
                         260
                     </p>
-                    <p className='text-gray-500 font-semibold text-sm lg:text-md'>
+                    <p className='text-gray-500 font-semibold text-lg'>
                         Open Roles: 20
                     </p>
                 </button>
@@ -165,13 +165,13 @@ const Overview = () => {
             <Dailog open={open} onClose={() => setOpen(false)} />
             <div className=' lg:flex justify-start items-start gap-2 w-full'>
                 <div className='lg:w-[50%] md:w-full flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 '>
-                    <p className='font-bold text-sm lg:text-lg'>
+                    <p className='font-bold text-lg'>
                         Headcount by Region
                     </p>
-                    <p className='font-semibold text-left text-gray-500 text-sm lg:text-md'>
+                    <p className='font-semibold text-left text-gray-500 text-lg'>
                         Leadership view(drill-down available above)
                     </p>
-                    <div className='w-full h-[200px] lg:h-[300px]'>
+                    <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
                             <BarChart data={data}>
                                 <XAxis
@@ -190,13 +190,13 @@ const Overview = () => {
                     </div>
                 </div>
                 <div className='lg:w-[50%] md:w-full flex flex-col mt-2 gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 lg:mt-0'>
-                    <p className='font-bold text-sm lg:text-lg'>
+                    <p className='font-bold text-lg'>
                         Attrition Trend
                     </p>
-                    <p className='font-semibold text-left text-gray-500 text-sm lg:text-md'>
+                    <p className='font-semibold text-left text-gray-500 text-lg'>
                         Workspace Stability signal
                     </p>
-                    <div className='w-full h-[200px] lg:h-[300px]'>
+                    <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
                             <LineChart data={linecChartData}>
 
@@ -218,13 +218,13 @@ const Overview = () => {
             </div>
             <div className='lg:flex justify-start  gap-4 w-full'>
                 <div className='lg:w-[1/3] md:w-full flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 '>
-                    <p className='font-bold text-sm lg:text-lg'>
+                    <p className='font-bold text-lg'>
                         Hiring Velocity
                     </p>
-                    <p className='font-semibold text-left text-gray-500 text-sm lg:text-md'>
+                    <p className='font-semibold text-left text-gray-500 text-lg'>
                         Filled roles(trend)
                     </p>
-                    <div className='w-full h-[200px] lg:h-[300px]'>
+                    <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
                             <AreaChart data={areaChartData}>
 
@@ -244,13 +244,13 @@ const Overview = () => {
                     </div>
                 </div>
                 <div className='lg:w-[1/3] md:w-full flex flex-col gap-2 justify-start items-start shadow-md rounded-md px-4 py-4 mt-2 '>
-                    <p className='font-bold text-sm lg:text-lg'>
+                    <p className='font-bold text-lg'>
                         Risk Segmentation
                     </p>
-                    <p className='font-semibold text-left text-gray-500 text-sm lg:text-md'>
+                    <p className='font-semibold text-left text-gray-500 text-lg'>
                         Flight-risk distribution(mock model output.)
                     </p>
-                    <div className='w-full h-[200px] lg:h-[300px]'>
+                    <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
                             <PieChart>
                                 <Pie
@@ -274,21 +274,21 @@ const Overview = () => {
                 <div className='lg:w-[1/3] md:w-full flex flex-col gap-1 justify-start items-start shadow-md rounded-md px-4 py-4 mt-2'>
                     <div className='flex flex-row justify-between items-center gap-4 w-full'>
                         <div className='flex flex-col items-start justify-start '>
-                            <p className='font-bold text-sm lg:text-lg'>
+                            <p className='font-bold text-lg'>
                                 Certified Numbers
                             </p>
-                            <p className='text-left text-gray-500 font-semibold text-sm lg:text-md'>
+                            <p className='text-left text-gray-500 font-semibold text-md'>
                                 Governed & reconciled metrics for leadership.
                             </p>
                         </div>
                         <div className='flex gap-2 items-center font-bold shadow-md0 rounded-xl px-2'>
                             <AiOutlineSafetyCertificate className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-sm lg:text-md'>
+                            <p className=''>
                                 certified
                             </p>
                         </div>
                     </div>
-                    <div className='flex flex-row justify-between w-full text-sm lg:md'>
+                    <div className='flex flex-row justify-between w-full'>
                         <p>
                             Workday-Planful
                         </p>
@@ -296,7 +296,7 @@ const Overview = () => {
                             Aligned
                         </p>
                     </div>
-                    <div className='flex flex-row justify-between w-full text-sm lg:md'>
+                    <div className='flex flex-row justify-between w-full'>
                         <p>
                             Manager hierarchy
                         </p>
@@ -304,7 +304,7 @@ const Overview = () => {
                             Validated
                         </p>
                     </div>
-                    <div className='flex flex-row justify-between w-full text-sm lg:md'>
+                    <div className='flex flex-row justify-between w-full '>
                         <p>
                             Duplicated
                         </p>
@@ -312,7 +312,7 @@ const Overview = () => {
                             2 open
                         </p>
                     </div>
-                    <div className='w-full shadow-md  px-3 py-1 rounded-md flex flex-row justify-center items-center text-sm lg:md font-semibold'>
+                    <div className='w-full shadow-md  px-3 py-2 rounded-md flex flex-row justify-center items-center font-semibold'>
                         <p>
                             Open Governance Console
                         </p>
@@ -320,14 +320,14 @@ const Overview = () => {
                 </div>
             </div>
             <div className='lg:flex w-full gap-2 justify-start'>
-                <div className='lg:w-[1/2] md:w-full flex flex-col gap-1 justify-start items-start shadow-md rounded-md px-4 py-4 text-sm lg:text-lg'>
-                    <p className='font-bold text-sm lg:text-lg'>
+                <div className='lg:w-[1/2] md:w-full flex flex-col gap-1 justify-start items-start shadow-md rounded-md px-4 py-4 text-lg'>
+                    <p className='font-bold text-lg'>
                         Workforce Cost Overlay(Planful-ready)
                     </p>
-                    <p className='font-semibold text-left text-gray-500 text-sm lg:text-md'>
+                    <p className='font-semibold text-left text-gray-500 text-lg'>
                         Budget vs Actual vs Forecast(in $M)
                     </p>
-                    <div className='w-full h-[200px] lg:h-[300px]'>
+                    <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
                             <BarChart data={multiBarData} barGap={4}>
                                 <CartesianGrid vertical={false} strokeDasharray="3 3" />
@@ -358,19 +358,19 @@ const Overview = () => {
                     <div className='flex items-center justify-between w-full'>
 
                         <div className='flex flex-col items-start gap-1'>
-                            <p className='font-bold  lg:py-3'>
+                            <p className='font-bold text-lg lg:py-3'>
                                 Variance Notes (Leadership-ready)
                             </p>
-                            <p className='font-semibold text-left text-gray-500 text-sm lg:text-md'>
+                            <p className='font-semibold text-left text-gray-500 text-lg'>
                                 Close-the-loop documentation for monthly close.
                             </p>
                         </div>
                         <div className='flex gap-2 items-center font-bold shadow-md0 rounded-xl px-4 py-1 ml-4'>
                             <LuHandCoins className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-sm lg:text-md'>Planful</p>
+                            <p className=''>Planful</p>
                         </div>
                     </div>
-                    <table className="w-full text-sm lg:text-md">
+                    <table className="w-full ">
                         <thead>
                             <tr className="text-gray-400 text-left border-b">
                                 <th className="py-2 lg:py-3">Month</th>
@@ -389,7 +389,7 @@ const Overview = () => {
                                         <td className="py-2 lg:py-3">{item.budget}</td>
                                         <td className="py-2 lg:py-3">{item.actual}</td>
                                         <td className="py-2 lg:py-3 text-right">
-                                            <span className="bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">
+                                            <span className="bg-red-600 text-white text-sm px-2 py-0.5 rounded-full">
                                                 +{variance}
                                             </span>
                                         </td>
