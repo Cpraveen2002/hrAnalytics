@@ -1,12 +1,12 @@
 import React from 'react'
 import { CiFilter, CiUser } from "react-icons/ci";
-import Overview from './Overview';
-import Planning from './Planning';
-import Risk from './Risk';
-import GlobalOPs from './GlobalOPs';
-import ActionCenter from './ActionCenter';
-import Talent from './Talent';
-import Governance from './Governance';
+import Overview from '../../features/overview/Overview';
+import Planning from '../../features/planning/Planning';
+import Risk from '../../features/risk/Risk';
+import GlobalOps from '../../features/global-ops/GlobalOps';
+import ActionCenter from '../../features/action-center/ActionCenter';
+import Talent from '../../features/talent/Talent';
+import Governance from '../../features/governance/Governance';
 const Tabbar = () => {
     const [active, setActive] = React.useState("Overview");
     return (
@@ -53,7 +53,7 @@ const Tabbar = () => {
             {active === "Overview" && <Overview />}
             {active === "Planning" && <Planning />}
             {active === "Risk" && <Risk />}
-            {active === "Global Ops" && <GlobalOPs />}
+            {active === "Global Ops" && <GlobalOps />}
             {active === "Action Center" && <ActionCenter />}
             {active === "Talent" && <Talent />}
             {active === "Governance" && <Governance />}

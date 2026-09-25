@@ -15,13 +15,13 @@ const todoSlice = createSlice({
         },
 
         toggleTodo: (state, action) => {
-            const todo = state.todos.find((t) => t.id == action.payload);
+            const todo = state.todos.find((t) => t.id === action.payload);
             if (todo) {
                 todo.completed = !todo.completed;
             }
         },
         removeTodo: (state, action) => {
-            state.todos = state.todos.filter((t) => t.id != action.payload);
+            state.todos = state.todos.filter((t) => t.id !== action.payload);
         },
 
     }

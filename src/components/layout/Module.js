@@ -4,7 +4,7 @@ import { LuGitCompare } from "react-icons/lu";
 import { IoMdTrendingUp } from "react-icons/io";
 import { TbActivityHeartbeat } from "react-icons/tb";
 import { PiGitForkLight } from "react-icons/pi";
-import { CiDatabase, CiMenuKebab } from "react-icons/ci";
+import { CiDatabase } from "react-icons/ci";
 import { MdOutlineEventNote } from "react-icons/md";
 const Module = () => {
     return (

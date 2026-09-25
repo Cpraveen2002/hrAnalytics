@@ -3,14 +3,11 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import { BiCategoryAlt } from "react-icons/bi";
 import { PiStarFour } from "react-icons/pi";
 import { IoMdTrendingUp } from "react-icons/io";
-const data = [
-    { metric: "Delivery", value: 82 },
-    { metric: "Potential", value: 68 },
-    { metric: "Skill Depth", value: 72 },
-    { metric: "Engagement", value: 75 },
-    { metric: "Mobility", value: 60 }
-];
+import { useAnalyticsData } from '../../context/AnalyticsDataContext';
 const Talent = () => {
+    const { data } = useAnalyticsData();
+    const radarData = data.talent.radar;
+    const grid = data.talent.grid;
     return (
         <div className='flex flex-col gap-2 px-4 py-2 justify-between w-full'>
             <div className='flex justify-between items-center w-full '>
@@ -39,7 +36,7 @@ const Talent = () => {
                     </div>
                     <div className="w-full h-60 lg:h-80 font-semibold text-lg">
                         <ResponsiveContainer>
-                            <RadarChart data={data}>
+                            <RadarChart data={radarData}>
                                 <PolarGrid />
                                 <PolarAngleAxis
                                     dataKey="metric"
@@ -78,84 +75,20 @@ const Talent = () => {
                             <p className='py-3 text-center '>Mid Perf</p>
                             <p className='py-3 text-center '>High Perf</p>
                         </div>
-                        <div className='grid grid-cols-3 divide-x divide-y '>
-                            <div className='flex flex-col items-center border justify-center py-3 lg:py-6  '>
-                                <div className=' font-bold text-gray-900' >
-                                    6
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
+                        {grid.map((row, rowIndex) => (
+                            <div key={rowIndex} className='grid grid-cols-3 divide-x divide-y '>
+                                {row.map((count, colIndex) => (
+                                    <div key={`${rowIndex}-${colIndex}`} className='flex flex-col items-center border justify-center py-3 lg:py-6'>
+                                        <div className=' font-bold text-gray-900' >
+                                            {count}
+                                        </div>
+                                        <div className='text-gray-500 font-semibold'>
+                                            employees
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className='flex flex-col items-center justify-center py-3 lg:py-6 '>
-                                <div className=' font-bold text-gray-900' >
-                                    18
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
-                            </div>
-                            <div className='flex flex-col items-center justify-center py-3 lg:py-6 '>
-                                <div className=' font-bold text-gray-900' >
-                                    22
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
-                            </div>
-                        </div>
-                        <div className='grid grid-cols-3 divide-x divide-y '>
-                            <div className='flex flex-col items-center border justify-center py-3 lg:py-6'>
-                                <div className=' font-bold text-gray-900' >
-                                    9
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
-                            </div>
-                            <div className='flex flex-col items-center justify-center py-3 lg:py-6 '>
-                                <div className=' font-bold text-gray-900' >
-                                    28
-                                </div>
-                                <div className='font-semibold text-gray-500'>
-                                    employees
-                                </div>
-                            </div>
-                            <div className='flex flex-col items-center justify-center py-3 lg:py-6 '>
-                                <div className='font-bold text-gray-900' >
-                                    35
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
-                            </div>
-                        </div>
-                        <div className='grid grid-cols-3 divide-x divide-y '>
-                            <div className='flex flex-col items-center border justify-center py-3 lg:py-6 '>
-                                <div className=' font-bold text-gray-900' >
-                                    12
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
-                            </div>
-                            <div className='flex flex-col items-center justify-center py-3 lg:py-6 '>
-                                <div className=' font-bold text-gray-900' >
-                                    24
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
-                            </div>
-                            <div className='flex flex-col items-center justify-center py-3 lg:py-6 '>
-                                <div className=' font-bold text-gray-900' >
-                                    16
-                                </div>
-                                <div className='text-gray-500 font-semibold'>
-                                    employees
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                     <div className='flex  w-full justify-between'>
                         <button className='flex gap-2 rounded-md px-2 py-1 shadow-sm border-2 border-gray-30 font-bold items-center'>

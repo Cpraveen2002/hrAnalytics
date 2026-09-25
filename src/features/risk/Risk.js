@@ -1,28 +1,14 @@
 import React from 'react'
 import { PiGitForkLight } from "react-icons/pi";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { Pie, PieChart, Cell, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-const pieChartData = [
-    { name: "High Risk", value: 20 },
-    { name: "Medium Risk", value: 35 },
-    { name: "Low Risk", value: 45 },
-];
-const linecChartData = [
-    { month: "Jan", value: 2.1 },
-    { month: "Feb", value: 2.4 },
-    { month: "Mar", value: 2.9 },
-    { month: "Apr", value: 3.2 },
-    { month: "May", value: 3.0 },
-    { month: "Jun", value: 2.7 },
-];
-const tableData = [
-    { role: "Sr.Engineer", region: "EMEA", team: "R&D", tenure: "2.1y", performance: "High", risk: "High", likelyDriver: "Promotion lag" },
-    { role: "HRBP", region: "APAC", team: "HR", tenure: "1.4y", performance: "Med", risk: "High", likelyDriver: "Manager change" },
-    { role: "QA Lead", region: "North America", team: "Quality", tenure: "3.2y", performance: "High", risk: "Med", likelyDriver: "Workload" },
-    { role: "Analyst", region: "Brazil", team: "Ops", tenure: "0.9y", performance: "Med", risk: "Med", likelyDriver: "Role mismatch" },
-];
+import { Pie, PieChart, Cell, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { useAnalyticsData } from '../../context/AnalyticsDataContext';
 const COLORS = ["#ef4444", "#f59e0b", "#22c55e",];
 const Risk = () => {
+    const { data } = useAnalyticsData();
+    const pieChartData = data.risk.riskSegmentation;
+    const linecChartData = data.risk.attritionTrend;
+    const tableData = data.risk.retentionWatchlist;
     return (
         <div className='flex flex-col gap-3 px-4 py-3 w-full justify-start items-start '>
             <div className='flex md:flex-row lg:flex-row justify-between gap-2 w-full items-center'>
@@ -124,24 +110,24 @@ const Risk = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {tableData.map((data) => {
+                            {tableData.map((row) => {
                                 return (
-                                    <tr className="border-b-2 last:border-b-0">
-                                        <td className="">{data.role}</td>
-                                        <td className="">{data.region}</td>
-                                        <td className="">{data.team}</td>
-                                        <td className="">{data.tenure}</td>
-                                        <td className="">{data.performance}</td>
+                                    <tr key={`${row.role}-${row.region}-${row.team}`} className="border-b-2 last:border-b-0">
+                                        <td className="">{row.role}</td>
+                                        <td className="">{row.region}</td>
+                                        <td className="">{row.team}</td>
+                                        <td className="">{row.tenure}</td>
+                                        <td className="">{row.performance}</td>
                                         <td className=" ">
-                                            {data.risk === "High" && <span className="bg-red-600 font-bold text-white px-2 py-0.5 rounded-full">
+                                            {row.risk === "High" && <span className="bg-red-600 font-bold text-white px-2 py-0.5 rounded-full">
                                                 High
                                             </span>}
-                                            {data.risk === "Med" && <span className="bg-gray-300 font-bold text-black  px-2 py-0.5 rounded-full">
+                                            {row.risk === "Med" && <span className="bg-gray-300 font-bold text-black  px-2 py-0.5 rounded-full">
                                                 Med
                                             </span>}
                                         </td>
                                         <td className="py-4">
-                                            {data.likelyDriver}
+                                            {row.likelyDriver}
                                         </td>
                                     </tr>
                                 );

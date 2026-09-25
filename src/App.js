@@ -1,13 +1,27 @@
 
 import './App.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { CiMenuKebab, CiGlobe, CiUser, CiClock2, CiDatabase, CiImport } from "react-icons/ci";
-import { IoMdMenu } from "react-icons/io";
+import React, { useRef } from 'react';
+import { CiGlobe, CiUser, CiClock2, CiDatabase, CiImport } from "react-icons/ci";
 import { FiBell } from 'react-icons/fi';
-import DashBoard from './components/Dashboard';
-import Module from './components/Module';
-import Tabbar from './components/Tabbar';
-function App() {
+import DashBoard from './components/layout/Dashboard';
+import Module from './components/layout/Module';
+import Tabbar from './components/layout/Tabbar';
+import { AnalyticsDataProvider, useAnalyticsData } from './context/AnalyticsDataContext';
+
+function AppContent() {
+  const fileInputRef = useRef(null);
+  const { data, fileName, importExcelData, selectedRegion, availableRegions, setSelectedRegion } = useAnalyticsData();
+
+  const handleExcelImport = async (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    await importExcelData(file);
+    event.target.value = '';
+  };
+
+  const handleRegionChange = (event) => {
+    setSelectedRegion(event.target.value);
+  };
 
   return (
     <div className="App">
@@ -27,13 +41,18 @@ function App() {
           </div>
           <div className='flex flex-row items-center justify-between gap-4 items-center w-full lg:w-auto '>
             <input type="text" placeholder='Search people signals,teams' className='shadow-md border-2 rounded-md px-8 py-2 text-lg' />
-            <div className='hidden md:flex  lg:flex  ml-2 justify-between items-center shadow-sm border-2 border-gray-30 rounded-md px-12 py-2'>
-              <div className='mr-2 flex flex-row justify-start items-center font-bold lg:text-lg '>
-                <p>Global</p>
-              </div>
+            <div className='hidden md:flex  lg:flex  ml-2 justify-between items-center shadow-sm border-2 border-gray-300 rounded-lg px-4 py-2 bg-white hover:bg-gray-50 transition-colors'>
+
               <div className='ml-2 flex flex-row justify-end items-center'>
-                <select >
-                </select >
+                <select 
+                  value={selectedRegion} 
+                  onChange={handleRegionChange} 
+                  className='font-bold cursor-pointer bg-transparent text-gray-700 border-0 focus:outline-none focus:ring-0 px-2 py-1 rounded text-base'
+                >
+                  {availableRegions.map(region => (
+                    <option key={region} value={region} className='font-semibold text-gray-700 bg-white'>{region}</option>
+                  ))}
+                </select>
               </div>
 
             </div>
@@ -65,26 +84,41 @@ function App() {
             </p>
           </div>
           <div className='flex flex-col justify-start items-start '>
-            <div className='flex flex-row justify-start items-center'>
+            <div className='flex flex-row justify-between items-center gap-2'>
               <div className='flex bg-blue-100 gap-1 rounded-lg justify-center items-center px-2 py-1 border-2 border-gray-30'>
                 <CiDatabase className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1.5 }} />
                 <p className='text-lg lg:text-xl font-semibold text-left'>
-                  Data Health:98%
+                  Data Health:{data.appMeta.dataHealth}
                 </p>
               </div>
-              <div className='flex shadow-sm border-2 border-gray-30 rounded-lg justify-center items-center ml-4 px-4 gap-2'>
+              <div className='flex shadow-sm border-2 border-gray-30 rounded-lg justify-center items-center  px-4 py-1 gap-2'>
                 <CiClock2 className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1.5 }} />
                 <p className='text-lg lg:text-xl font-semibold text-left px-1'>
-                  Last Refresh: Today 08:45 AM (IST)
+                  Last Refresh: {data.appMeta.lastRefresh}
                 </p>
               </div>
-            </div>
-            <button className='flex shadow-sm border-2 border-gray-30 rounded-md mt-2 justify-center items-center py-2 px-2 gap-2'>
-              <CiImport className='w-6 h-6 lg:w-8 lg:h-8' style={{ strokeWidth: 1.5 }} />
+               <button
+              className='flex shadow-sm  rounded-md mt-2 justify-center items-center py-2 px-2 gap-2 bg-green-500 text-white font-bold'
+              onClick={() => fileInputRef.current?.click()}
+            >
+              <CiImport className='w-6 h-6 lg:w-8 lg:h-6' style={{ strokeWidth: 1.5 }} />
               <p className='text-lg lg:text-xl font-bold flex'>
-                Export <span className='hidden'>(excel)</span>
+                Import <span className='hidden'>(excel)</span>
               </p>
             </button>
+               <input
+              ref={fileInputRef}
+              type="file"
+              accept=".xlsx,.xls"
+              className="hidden"
+              onChange={handleExcelImport}
+            />
+            {fileName && (
+              <div className='flex items-center gap-2 mt-2'>
+                <p className='text-sm text-left text-gray-500 font-semibold'>Loaded: {fileName}</p>
+              </div>
+            )}
+            </div>
           </div>
         </div>
         <DashBoard />
@@ -94,6 +128,14 @@ function App() {
         </div>
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AnalyticsDataProvider>
+      <AppContent />
+    </AnalyticsDataProvider>
   );
 }
 

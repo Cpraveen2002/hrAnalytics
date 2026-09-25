@@ -4,7 +4,10 @@ import { FiAlertTriangle, FiBell } from "react-icons/fi";
 import { MdOutlineEventNote } from "react-icons/md";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { PiGitForkLight } from "react-icons/pi";
+import { useAnalyticsData } from '../../context/AnalyticsDataContext';
 const ActionCenter = () => {
+    const { data } = useAnalyticsData();
+    const summary = data.actionCenter.summary;
     return (
         <div className='flex flex-col justify-start items-start gap-3 px-4 py-2 mt-2 w-full'>
             <div className='flex items-center justify-between w-full'>
@@ -37,7 +40,7 @@ const ActionCenter = () => {
                         </div>
                     </div>
                     <p className='font-bold text-2xl'>
-                        3
+                        {summary.pendingApprovals}
                     </p>
                     <p className='text-gray-500 text-left font-semibold'>
                         Need decision
@@ -50,7 +53,7 @@ const ActionCenter = () => {
                         </p>
                     </div>
                     <p className='font-bold text-2xl'>
-                        3
+                        {summary.activePlaybooks}
                     </p>
                     <p className='text-gray-500 text-left font-semibold'>
                         Reusable workflows
@@ -63,7 +66,7 @@ const ActionCenter = () => {
                         </p>
                     </div>
                     <p className='font-bold text-2xl'>
-                        3
+                        {summary.reminders}
                     </p>
                     <p className='text-gray-500 text-left font-semibold'>
                         Recurring ops

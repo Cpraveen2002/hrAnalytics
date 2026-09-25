@@ -1,56 +1,25 @@
 import React from 'react'
 import { useState } from "react";
-import { FiAlertTriangle, FiTarget } from "react-icons/fi";
+import { FiTarget } from "react-icons/fi";
 import { LuHandCoins } from "react-icons/lu";
 import { AiOutlineFileExcel, AiOutlineSafetyCertificate } from "react-icons/ai";
 import { Pie, PieChart, Cell, Area, AreaChart, LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-import Dailog from './Dailog';
-const data = [
-    { region: "APAC", value: 420 },
-    { region: "EMEA", value: 310 },
-    { region: "Brazil", value: 180 },
-    { region: "North America", value: 260 },
-];
-const linecChartData = [
-    { month: "Jan", value: 2.1 },
-    { month: "Feb", value: 2.4 },
-    { month: "Mar", value: 2.9 },
-    { month: "Apr", value: 3.2 },
-    { month: "May", value: 3.0 },
-    { month: "Jun", value: 2.7 },
-];
-const areaChartData = [
-    { month: "Jan", value: 12 },
-    { month: "Feb", value: 15 },
-    { month: "Mar", value: 18 },
-    { month: "Apr", value: 14 },
-    { month: "May", value: 16 },
-    { month: "Jun", value: 20 },
-];
-const pieChartData = [
-    { name: "High Risk", value: 20 },
-    { name: "Medium Risk", value: 35 },
-    { name: "Low Risk", value: 45 },
-];
-const multiBarData = [
-    { month: "Jan", budget: 10.2, actual: 9.8, forecast: 10.0 },
-    { month: "Feb", budget: 10.5, actual: 10.1, forecast: 10.3 },
-    { month: "Mar", budget: 11.0, actual: 10.6, forecast: 10.8 },
-    { month: "Apr", budget: 10.8, actual: 10.4, forecast: 10.6 },
-    { month: "May", budget: 11.2, actual: 10.9, forecast: 11.0 },
-    { month: "Jun", budget: 11.0, actual: 10.7, forecast: 10.9 },
-];
-const tableData = [
-    { month: "Jan", budget: 9.8, actual: 10.1 },
-    { month: "Feb", budget: 9.9, actual: 10.2 },
-    { month: "Mar", budget: 10.0, actual: 10.6 },
-    { month: "Apr", budget: 10.1, actual: 10.4 },
-    { month: "May", budget: 10.2, actual: 10.9 },
-    { month: "Jun", budget: 10.3, actual: 10.8 },
-];
+import Dialog from './Dialog';
+import { useAnalyticsData } from '../../context/AnalyticsDataContext';
 const COLORS = ["#ef4444", "#f59e0b", "#22c55e",];
 const Overview = () => {
     const [open, setOpen] = useState(false);
+    const [selectedRegion, setSelectedRegion] = useState("APAC");
+    const { data } = useAnalyticsData();
+    const regionCards = data.overview.regionCards;
+    const headcountByRegion = data.overview.headcountByRegion;
+    const attritionTrend = data.overview.attritionTrend;
+    const hiringVelocity = data.overview.hiringVelocity;
+    const riskSegmentation = data.overview.riskSegmentation;
+    const costOverlay = data.overview.costOverlay;
+    const varianceNotes = data.overview.varianceNotes;
+    const regionDrilldown = data.overview.regionDrilldown || [];
+    const selectedRegionDrilldown = regionDrilldown.find((item) => item.region === selectedRegion) || regionDrilldown[0];
     return (
         <div className='flex flex-col justify-start items-start w-full gap-4'>
             <div className='gap-4 flex-col md:flex md:flex-row md:items-start lg:flex-row justify:start lg:justify-between items-start w-full'>
@@ -63,12 +32,12 @@ const Overview = () => {
                     </p>
                 </div>
                 <div className='flex flex-row justify-between lg:justify-end gap-3 mt-4'>
-                    <div className='flex gap-2 justify-start items-center shadow-sm px-4 py-1 rounded-xl border-2 border-gray-30'>
+                    {/* <div className='flex gap-2 justify-start items-center shadow-sm px-4 py-1 rounded-xl border-2 border-gray-30'>
                         <FiAlertTriangle className='w-4 h-4 lg:w-6 lg:h-6' />
                         <p className='text-left font-semibold text-lg'>
                             View Alerts
                         </p>
-                    </div>
+                    </div> */}
                     <div className='flex gap-2 justify-start items-center shadow-sm border-2 border-gray-30 px-4 py-1 rounded-xl'>
                         <AiOutlineFileExcel className="w-4 h-4 lg:w-6 lg:h-6" />
                         <p className='text-left font-semibold text-lg'>
@@ -78,91 +47,29 @@ const Overview = () => {
                 </div>
             </div>
             <div className='grid lg:grid-cols-4 grid-cols-2 gap-2 w-full justify-start items-start'>
-                <button type='button' onClick={() => {
-                    setOpen(true)
-                    console.log("clicked")
-
-                }} className='flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4'>
-                    <div className='flex flex-row justify-between items-start gap-4' >
-                        <p className='text-lg font-bold'>
-                            APAC
-                        </p>
-                        <div className='flex gap-1 justify-start items-center px-4 py-1 shadow-sm border-2 border-gray-30 rounded-xl'>
-                            <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <span className=''>
-                                Drill down
-                            </span>
-                        </div>
-                    </div>
-                    <p className='font-bold text-xl lg:text-2xl'>
-                        420
-                    </p>
-                    <p className='text-gray-500 font-semibold text-lg'>
-                        Open Roles: 28
-                    </p>
-                </button>
-                <button type='button' onClick={() => { setOpen(true) }} className=' flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4'>
-                    <div className='flex flex-row justify-between items-start gap-4'>
-
-                        <p className='text-lg font-bold'>
-                            EMEA
-                        </p>
-                        <div className='flex gap-1 justify-start items-center  px-4 py-1 shadow-sm border-2 border-gray-30 rounded-xl'>
-                            <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-lg'>
-                                Drill down
+                {regionCards.map((region) => (
+                    <button key={region.region} type='button' onClick={() => { setSelectedRegion(region.region); setOpen(true) }} className='flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4'>
+                        <div className='flex flex-row justify-between items-start gap-4'>
+                            <p className='text-lg font-bold'>
+                                {region.region}
                             </p>
+                            <div className='flex gap-1 justify-start items-center px-4 py-1 shadow-sm border-2 border-gray-30 rounded-xl'>
+                                <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
+                                <p className='text-lg font-semibold text-left text-gray-600'>
+                                    Insights
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <p className='font-bold text-xl lg:text-2xl'>
-                        310
-                    </p>
-                    <p className='text-gray-500 font-semibold text-lg'>
-                        Open Roles: 22
-                    </p>
-                </button>
-                <button type='button' onClick={() => { setOpen(true) }} className='flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4'>
-                    <div className='flex flex-row justify-between items-start gap-4'>
-
-                        <p className='text-lg font-bold'>
-                            Brazil
+                        <p className='font-bold text-xl lg:text-2xl'>
+                            {region.value}
                         </p>
-                        <div className='flex gap-1 justify-start items-center px-4 py-1 shadow-sm border-2 border-gray-30 rounded-xl'>
-                            <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-lg'>
-                                Drill down
-                            </p>
-                        </div>
-                    </div>
-                    <p className='font-bold text-xl lg:text-2xl'>
-                        180
-                    </p>
-                    <p className='text-gray-500 font-semibold text-lg'>
-                        Open Roles: 28
-                    </p>
-                </button>
-                <button type='button' onClick={() => { setOpen(true) }} className='flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4'>
-                    <div className='flex flex-row justify-between items-start gap-4'>
-
-                        <p className=' text-left text-lg font-bold'>
-                            North America
+                        <p className='text-gray-500 font-semibold text-lg'>
+                            Open Roles: {region.openRoles}
                         </p>
-                        <div className='flex gap-1 justify-start items-center px-4 py-1 shadow-sm border-2 border-gray-30 rounded-xl'>
-                            <FiTarget className="w-4 h-4 lg:w-6 lg:h-6" />
-                            <p className='text-lg'>
-                                Drill down
-                            </p>
-                        </div>
-                    </div>
-                    <p className='font-bold text-xl lg:text-2xl'>
-                        260
-                    </p>
-                    <p className='text-gray-500 font-semibold text-lg'>
-                        Open Roles: 20
-                    </p>
-                </button>
+                    </button>
+                ))}
             </div>
-            <Dailog open={open} onClose={() => setOpen(false)} />
+            <Dialog open={open} onClose={() => setOpen(false)} drilldownData={selectedRegionDrilldown} />
             <div className=' lg:flex justify-start items-start gap-2 w-full'>
                 <div className='lg:w-[50%] md:w-full flex flex-col gap-2 justify-start items-start shadow-sm border-2 border-gray-30 rounded-md px-4 py-4 '>
                     <p className='font-bold text-lg'>
@@ -173,7 +80,7 @@ const Overview = () => {
                     </p>
                     <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
-                            <BarChart data={data}>
+                            <BarChart data={headcountByRegion}>
                                 <XAxis
                                     dataKey="region"
                                     tick={{ fontSize: 12 }}
@@ -198,7 +105,7 @@ const Overview = () => {
                     </p>
                     <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
-                            <LineChart data={linecChartData}>
+                            <LineChart data={attritionTrend}>
 
                                 <XAxis dataKey="month" tick={{ fontSize: 12 }} />
                                 <YAxis tick={{ fontSize: 12 }} />
@@ -226,7 +133,7 @@ const Overview = () => {
                     </p>
                     <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
-                            <AreaChart data={areaChartData}>
+                            <AreaChart data={hiringVelocity}>
 
                                 <XAxis dataKey="month" tick={{ fontSize: 12 }} />
                                 <YAxis tick={{ fontSize: 12 }} />
@@ -254,7 +161,7 @@ const Overview = () => {
                         <ResponsiveContainer>
                             <PieChart>
                                 <Pie
-                                    data={pieChartData}
+                                    data={riskSegmentation}
                                     dataKey="value"
                                     nameKey="name"
                                     cx="50%"
@@ -262,7 +169,7 @@ const Overview = () => {
                                     outerRadius={100}
                                     innerRadius={0}
                                 >
-                                    {pieChartData.map((_, index) => (
+                                    {riskSegmentation.map((_, index) => (
                                         <Cell key={index} fill={COLORS[index]} />
                                     ))}
                                 </Pie>
@@ -329,7 +236,7 @@ const Overview = () => {
                     </p>
                     <div className='w-full h-[200px] lg:h-[300px] text-lg font-semibold'>
                         <ResponsiveContainer>
-                            <BarChart data={multiBarData} barGap={4}>
+                            <BarChart data={costOverlay} barGap={4}>
                                 <CartesianGrid vertical={false} strokeDasharray="3 3" />
                                 <XAxis dataKey="month" tick={{ fontSize: 12 }} />
                                 <YAxis tick={{ fontSize: 12 }} />
@@ -380,7 +287,7 @@ const Overview = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {tableData.map((item) => {
+                            {varianceNotes.map((item) => {
                                 const variance = (item.actual - item.budget).toFixed(2);
 
                                 return (

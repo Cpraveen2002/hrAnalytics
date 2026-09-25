@@ -2,16 +2,14 @@ import React, { useState } from 'react'
 import { MdBookmarkAdd } from "react-icons/md";
 import { LuGitCompare } from "react-icons/lu";
 import { FiAlertTriangle } from "react-icons/fi";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-const data = [
-    { region: "Baseline", value: 1100 },
-    { region: "Projected", value: 1100 },
-    { region: "Demand", value: 1300 },
-];
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { useAnalyticsData } from '../../context/AnalyticsDataContext';
 const Planning = () => {
     const [attrition, setAttrition] = useState(0);
     const [impact, setImpact] = useState(0);
     const [growth, setGrowth] = useState(0);
+    const { data } = useAnalyticsData();
+    const chartData = data.planning.comparisonData;
     return (
         <div className='flex flex-col gap-4 w-full justify-start items-start w-full relative'>
             <div className='flex flex-row gap-2 justify-between items-start w-full mt-2'>
@@ -242,7 +240,7 @@ const Planning = () => {
                         </p>
                         <div className='w-full h-[200px] lg:h-[300px] text-lg font-bold '>
                             <ResponsiveContainer>
-                                <BarChart data={data}>
+                                <BarChart data={chartData}>
                                     {/* <CartesianGrid vertical={false} strokeDasharray="3 3" /> */}
                                     <XAxis
                                         dataKey="region"

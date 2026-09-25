@@ -1,13 +1,10 @@
 import React from 'react'
 import { CiDatabase } from "react-icons/ci";
 import { FiAlertTriangle } from "react-icons/fi"
-const data = [
-    { id: "DQ-1021", serverity: "High", system: "Workday", issue: "Duplicate worker IDs", impact: "Headcount mismatch", owner: "HRIS", age: "2d" },
-    { id: "DQ-0998", serverity: "High", system: "Planful", issue: "Cost center unmapped", impact: "Workforce cost variance", owner: "Finance", age: "5d" },
-    { id: "DQ-1107", serverity: "Medium", system: "Performance", issue: "Missing rating for 34 employees", impact: "Talent review gaps", owner: "HR Ops", age: "1d" },
-    { id: "DQ-1044", serverity: "Low", system: "Workday", issue: "Manager hierarchy drift", impact: "Approval routing", owner: "HRIS", age: "3h" },
-];
+import { useAnalyticsData } from '../../context/AnalyticsDataContext';
 const Governance = () => {
+    const { data } = useAnalyticsData();
+    const issueLog = data.governance.issueLog;
     return (
         <div className='w-full flex flex-col gap-3 px-4 py-2 justify-start items-start mt-3'>
             <div className='flex items-center justify-between w-full'>
@@ -40,7 +37,7 @@ const Governance = () => {
                         </div>
                     </div>
                     <p className='font-bold text-xl lg:text-2xl'>
-                        4
+                        {data.governance.openIssues}
                     </p>
                     <p className='text-left text-gray-500 font-semibold '>
                         Across Systems
@@ -102,9 +99,9 @@ const Governance = () => {
                     </thead>
                     <tbody>
                         {
-                            data.map((item) => {
+                            issueLog.map((item) => {
                                 return (
-                                    <tr className="border-b last:border-0 font-semibold ">
+                                    <tr key={item.id} className="border-b last:border-0 font-semibold ">
                                         <td className="px-3 py-4 ">{item.id}</td>
                                         <td className="px-3py-4 ">
                                             {item.serverity === "High" && <span className="rounded-full bg-red-500 px-3 py-1  font-bold text-white">
